@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <h1>WELCOME TO HOME PAGE</h1>
+    <p>msg is {{greet}}</p>
+    <p>{{x}}</p>
+    <p>{{y}}</p>
+    {% if x > y %}
+          <p>{{x}} is greater</p>
+    {% else %}
+         <p>{{y}} is greater</p> 
+    {% endif %} 
+       
+    <!--for printimg list-->>
+    <p>list is {{l}}</p>
+       {% for x in l %}
+            <p>{{x}}</p>
+        {% endfor %} 
+        
+        <button onclick="demo()">click here</button>
+        <img src="{% static 'images/django.jpeg' %}">
+
+</body>
+</html>
